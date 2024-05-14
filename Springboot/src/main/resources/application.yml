@@ -1,0 +1,23 @@
+spring:
+  data:
+    mongodb:
+      authentication-database: admin
+      username: mongoadmin
+      password: root
+      database: kantor
+      port: 27017
+      host: mongoDB
+
+server:
+  port: 8080
+
+application:
+  security:
+    jwt:
+      secret-key: 51546EB53E8439F156ACD2A7B7301CADEC13D0FF85F46FF0CC97005AE16776B7
+      expiration: 86400000
+      refresh-token:
+        expiration: 604800000
+logging:
+  level:
+    org.springframework.security: DEBUG
