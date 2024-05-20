@@ -141,7 +141,7 @@ const sellAmountRule = [
 ]
 const gain = computed(() => {
   if (selectedCurrency.value) {
-    return (amount.value / selectedCurrency.value.bid).toFixed(2);
+    return (amount.value * selectedCurrency.value.bid).toFixed(2);
   }
   return 0;
 });
